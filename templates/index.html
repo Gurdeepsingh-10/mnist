@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MNIST Digit Recognizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <!-- Top Row: Canvas + Buttons on left, Predictions on right -->
+            <div class="top-row">
+                <!-- Left column: Canvas + buttons -->
+                <div class="left-column">
+                    <h2>✍️ Draw a Digit</h2>
+                    <canvas id="canvas" width="280" height="280"></canvas>
+                    <div class="buttons">
+                        <button id="clear">Clear</button>
+                        <button id="predict">Predict</button>
+                    </div>
+                </div>
+
+                <!-- Right column: Top Predictions -->
+                <div class="right-column">
+                    <div class="prediction-container">
+                        <h2>Top Predictions</h2>
+                        <ul class="prediction-list" id="top3">
+                            <!-- Predictions will be dynamically added here -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Row: Confidence Chart -->
+            <div class="bottom-row">
+                <h2>Confidence Chart</h2>
+                <canvas id="chart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

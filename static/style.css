@@ -1,0 +1,156 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body: Dark theme background */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Card container */
+.card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* Top row: Canvas + Predictions side by side */
+.top-row {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/* Left column: Canvas + buttons */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Canvas styling */
+#canvas {
+    width: 280px;
+    height: 280px;
+    border-radius: 8px;
+    background-color: #000;
+    border: none;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* Buttons styling */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #bb86fc;
+    color: #000;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #985eff;
+}
+
+/* Right column: Predictions */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Prediction container */
+.prediction-container {
+    background-color: #2c2c2c;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.prediction-container h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.prediction-container p {
+    font-size: 1rem;
+    color: #b0b0b0;
+}
+
+/* Prediction list */
+.prediction-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.prediction-list li {
+    font-size: 1rem;
+    color: #ffffff;
+    padding: 4px 0;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+/* Bottom row: Chart */
+.bottom-row {
+    margin-top: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    background-color: #1e1e1e;
+    padding: 20px;
+}
+
+/* Chart canvas */
+#chart {
+    width: 100% !important;
+    max-width: 800px;
+    height: 400px !important;
+}
+
+/* Headings */
+h2,
+h3 {
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+/* Hover shadows */
+.card,
+.bottom-row,
+#canvas,
+.prediction-container {
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover,
+.bottom-row:hover,
+#canvas:hover,
+.prediction-container:hover {
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.15);
+}
