@@ -4,6 +4,7 @@ import tensorflow as tf
 from PIL import Image
 import io
 import base64
+from waitress import serve
 
 app = Flask(__name__)
 model = tf.keras.models.load_model("mnist_cnn.keras")
@@ -33,4 +34,6 @@ def predict():
     return jsonify({"top3": top3, "confidences": confidences})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    
+    serve(app, host="0.0.0.0", port=5000)
+
