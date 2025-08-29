@@ -4,7 +4,7 @@ import tensorflow as tf
 from PIL import Image
 import io
 import base64
-from waitress import serve
+
 
 app = Flask(__name__)
 model = tf.keras.models.load_model("mnist_cnn.keras")
